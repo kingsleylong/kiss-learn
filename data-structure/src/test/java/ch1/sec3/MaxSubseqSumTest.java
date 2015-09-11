@@ -1,5 +1,6 @@
 package ch1.sec3;
 
+import ch1.exer.alg2.Main;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -37,5 +38,11 @@ public class MaxSubseqSumTest {
         System.out.println("START");
         System.out.println(maxSubseqSum.calMaxSubseqSum2());
         System.out.println("END");
+    }
+
+    @Test
+    public void testMainCalMaxSubseqSum2() throws Exception {
+        Main maxSubseqSum = new Main();
+        System.out.println(maxSubseqSum.calMaxSubseqSum2());
     }
 }

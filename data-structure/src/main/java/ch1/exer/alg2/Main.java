@@ -14,7 +14,7 @@ public class Main {
         int thisSum, maxSum = 0;
         for (int i = 0; i < sequence.length; i++) {
             thisSum = 0;
-            for (int j = 0; j < sequence.length; j++) {
+            for (int j = i; j < sequence.length; j++) {
                 thisSum += sequence[j];
                 if (thisSum > maxSum) {
                     maxSum = thisSum;
