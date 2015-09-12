@@ -1,9 +1,13 @@
-package ch1.exer.alg2;
+package ch1.exer.复杂度1;
 
 import java.util.Scanner;
 
 /**
  * Created by kiss on 15/9/11.
+ *
+ * 01-复杂度1 最大子列和问题
+ *
+ * http://pta.patest.cn/pta/test/18/exam/4/question/610
  */
 public class Main {
     private int[] sequence;
@@ -24,6 +28,21 @@ public class Main {
         return maxSum;
     }
 
+    public int calMaxSubseqSum3() {
+        this.getInputs();
+        int thisSum = 0, maxSum = 0;
+        for (int i = 0; i < sequence.length; i++) {
+            thisSum += sequence[i];
+            if (thisSum > maxSum) {
+                maxSum = thisSum;
+            }
+            if (thisSum < 0) {
+                thisSum = 0;
+            }
+        }
+        return maxSum;
+    }
+
     private void getInputs() {
         Scanner scanner = new Scanner(System.in);
         this.setSeqLength(scanner.nextInt());
@@ -37,7 +56,8 @@ public class Main {
 
     public static void main(String[] args) {
         Main obj = new Main();
-        System.out.println(obj.calMaxSubseqSum2());
+//        System.out.println(obj.calMaxSubseqSum2());
+        System.out.println(obj.calMaxSubseqSum3());
     }
 
     public int[] getSequence() {

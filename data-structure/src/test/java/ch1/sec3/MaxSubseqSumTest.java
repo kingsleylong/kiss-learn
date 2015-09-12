@@ -1,6 +1,6 @@
 package ch1.sec3;
 
-import ch1.exer.alg2.Main;
+import ch1.exer.复杂度1.Main;
 import org.junit.Before;
 import org.junit.Test;
 
